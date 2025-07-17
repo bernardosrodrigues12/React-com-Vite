@@ -3,6 +3,7 @@ import BarraDePesquisa from './componentes/BarraDePesquisa';
 import Filtro from './componentes/Filtro';
 import Sidebar from './componentes/Sidebar';
 import Ordenacao from './componentes/Ordenacao';
+import Card from './componentes/Card';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <BarraDePesquisa />
         <Filtro />
         <Ordenacao />
+        <Card />
       </div>
     </div>
   )
