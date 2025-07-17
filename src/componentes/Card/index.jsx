@@ -5,16 +5,16 @@ import Code from './assets/code (1).png';
 import Chat from './assets/chat.png';
 import Share from './assets/share.png';
 
-export default function Card() {
+export default function Card({ imagemUrl, titulo, resumo, linhasDeCodigo, compartilhamentos, comentarios, usuario }) {
     return(
         <article className="card">
             <div className="card__imagem">
-                <img src={Capa} alt='imagem do post' />
+                <img src={imagemUrl} alt='imagem do post' />
             </div>
             <div className="card__conteudo">
                 <div className="conteudo__texto">
-                    <h3>Título do post</h3>
-                    <p>Resumo do post</p>
+                    <h3>{titulo}</h3>
+                    <p>{resumo}</p>
                 </div>
             </div>
 
@@ -22,21 +22,21 @@ export default function Card() {
                 <ul>
                     <li>
                         <img src={Code} alt="códigos" />
-                        100
+                        {linhasDeCodigo}
                     </li>
                     <li>
                         <img src={Share} alt="compartilhamentos" />
-                        12
+                        {compartilhamentos}
                     </li>
                     <li>
                         <img src={Chat} alt="comentários" />
-                        10
+                        {comentarios}
                     </li>
                 </ul>
 
                 <div className="rodape__usuario">
-                    <img src={Icone} alt='Icone do usuario'/>
-                    @Ender
+                    <img src={usuario.imagem} alt='Icone do usuario'/>
+                    {usuario.nome}
                 </div>
             </div>
         </article>
